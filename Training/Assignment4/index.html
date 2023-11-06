@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todo List</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div>
+                    <img src="menu.png" alt="menu" width="20px">
+                    <h2>Tasks</h2>
+                    <img src="more.png" alt="more" width="20px">
+                </div>
+                <div>
+                    <img src="sort.png" alt="sort" width="20px" onclick="sort();">
+                    <h2>Sort</h2>
+                </div>
+            </div>
+            <div class="box-container">
+                <form class="box">
+                    <button onclick="handleSubmit(event); updateEvent();">
+                        <img src="plus.png" alt="add" width="20px">
+                    </button>
+                    <input type="text" id="value" placeholder="Add a task" required>
+                </form>
+            </div>
+            <div id="taskAndStatus" class="box-container">
+            </div>
+            <div id="completedTask" class="box-container">
+            </div>
+        </div>   
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>

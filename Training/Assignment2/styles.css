@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    font-family: Roboto,"Helvetica Neue","Arial Nova","Nimbus Sans",Arial,sans-serif;
+    background-color: #ffffff;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.navbar span {
+    color: #ff0000;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+a{
+    text-decoration: none;    
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    width: 100px;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+  }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar2{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.navbar2 h3 {
+    font-size: medium;
+    font-weight: 300;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.search-container{
+    height: 150px;
+    position: relative;
+    background-color: #f0f4fc;
+}
+
+.search-container h3{
+    position: absolute;
+    left: 0;
+    top: 40%;
+    opacity: 0.5;
+    background-color: transparent;
+}
+
+.search-container label{
+    position: absolute;
+    top: 30%;
+    right: 28%;
+    opacity: 0.5;
+    font-size: smaller;
+    background-color: transparent;
+}
+
+.searchBar input{   
+    position: absolute;
+    right: 2%;
+    top: 44%;
+    width: 30%;
+    height: 35px;
+    float: left;
+    border: 1px solid grey;
+    border-right: none;
+}
+
+.searchBar button{
+    position: absolute;
+    right: 2%;
+    top: 44%;
+    width: 40px;
+    height: 35px;
+    float: left;
+    background-color: #0a57bb;
+    border: 1px solid grey;
+    border-radius: 2px;
+    border-left: none;
+}
+
+.searchBar img{
+    background-color: transparent;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f0f4fc;
+    padding: 20px 30px;
+}
+
+.box{
+    margin: 10px 15px;
+    display: flex;
+    align-items: center;
+    width: 35%;
+    height: 170px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.content img {
+    width: 80px;
+    height: 100px;
+    padding: 5px 20px;
+}
+
+.vertical {
+    border-left: 1px solid #000000;
+    height: 80px;
+}
+
+.content2{
+    padding: 20px
+}
+
+.content2 h2{
+    padding-bottom: 15px;
+    color: #0a57bb;
+}
+
+.content2 p{
+    opacity: 0.5;
+    font-weight: 300;
+}

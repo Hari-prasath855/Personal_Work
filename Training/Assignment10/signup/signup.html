@@ -1,0 +1,42 @@
+<h1>Sign Up</h1>
+
+<form id="myForm" name='signupForm'>
+    <input type="text" name="firstname" placeholder="First Name" ng-model="user.firstname" pattern="^[a-zA-Z]+$" required>
+    <span ng-if="signupForm.firstname.$error.required && signupForm.firstname.$touched">
+        First name is required.
+    </span>
+    
+    <input type="text" name="lastname" placeholder="Last Name" ng-model="user.lastname" pattern="^[a-zA-Z]+$" required>
+    <span ng-if="signupForm.lastname.$error.required && signupForm.lastname.$touched">
+        Last name is required.
+    </span>
+    
+    <input type="email" name="email" placeholder="Email Address" ng-model="user.email" required>
+    <span ng-if="signupForm.email.$invalid && signupForm.email.$touched">
+        Email is required and must be in example@domain format.
+    </span>
+    
+    <input type="text" name="phone" placeholder="Phone Number" ng-model="user.phone" pattern="[789][0-9]{9}" maxlength="10">
+    <span ng-if="signupForm.phone.$invalid && signupForm.phone.$touched">
+        Enter Valid Phone Number.
+    </span>
+
+    <input type="text" name="dish" placeholder="Favorite Dish (A1, B1, C1, D1, E1)" ng-model="user.dish" ng-change="isAvailable(user.dish)" required>
+    <span class="success" ng-if="span[0]==1">
+        Item exists in the menu.
+    </span>
+    <span ng-if="span[0]==0">
+        Doesn't exist.
+    </span>
+
+    <br />
+    <button class="btn btn-default" ng-disabled="signupForm.$invalid" ng-click="submit();">
+        Submit form
+    </button>
+    <span class="success" ng-if="span[0]==1 && message!=undefined">
+        {{message}}
+    </span>
+    <span ng-if="span[0]==0 && message!=undefined">
+        {{message}}
+    </span>
+</form>

@@ -1,0 +1,23 @@
+<nav-bar></nav-bar>
+<div class="buy">
+    <h1>Cart</h1>
+    <button ng-click="goToPage('/buy')">Proceed To Buy ({{cartItems.length}})</button>
+</div>
+<div ng-if="cartItems.length===0">Nothing</div>
+<div class="cart-container" ng-init="getProduct()" ng-repeat="item in cartItems">
+    <img src={{item.image}} alt="product">
+    <div class="div-container1">
+        <h2>${{item.salePrice}}</h2>
+        <h3>{{item.name}}</h3>
+        <h4>Manufacturer : {{item.manufacturer}}</h4>
+        <h5>{{item.shipping}}</h5>
+    </div>
+    <div class="div-container2">
+        <button class="quantity" ng-click="incrementQuantity(item.objectID)">+</button>
+        <p>{{item.quantity}}</p>
+        <button class="quantity" ng-click="decrementQuantity(item.objectID)">-</button>
+        <button class="remove" ng-click="removeFromCart(item.objectID)">Remove</button>  
+    </div>
+    
+      
+</div>

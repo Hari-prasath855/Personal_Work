@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Astonishing X-Men",
+        "shortname": "X-Men",
+        "description": "Astonishing X-Men has been a fan favorite for decades. "
+    },
+    {
+        "name": "Justice League of America",
+        "shortname": "Justice League",
+        "description": "Novelist Brad Meltzer was entrusted with DC's flagship title. "
+    },
+    {
+        "name": "New Avengers",
+        "shortname": "Avengers",
+        "description": "Brian Michael Bendis changed the Avengers forever."
+    },
+    {
+        "name": "Batman",
+        "shortname": "Batman",
+        "description": "There's no doubt about it; Batman is one of DC's top characters."
+    },
+    {
+        "name": "Amazing Spider-Man",
+        "shortname": "Spider-Man",
+        "description": "J. Michael Strazynski, JMS to his fans, managed to bring more emotional."
+    },
+    {
+        "name": "Action Comics",
+        "shortname": "Action Comics",
+        "description": "Superman is a classic superhero with fans worldwide."
+    },
+    {
+        "name": "The Incredible Hulk",
+        "shortname": "The Incredible Hulk",
+        "description": "Civil War. Pak takes the Hulk back to his roots and gives him a world to destroy."
+    },
+    {
+        "name": "Wolverine",
+        "shortname": "Wolverine",
+        "description": "Wolverine is arguably one of the top characters in the Marvel universe."
+    },
+    {
+        "name": "The Ultimates",
+        "shortname": "The Ultimates",
+        "description": "Mark Millar is famous for pushing the envelope with huge story arcs."
+    },
+    {
+        "name": "Name 10",
+        "shortname": "Short 10",
+        "description": "Description for set 10."
+    }
+]

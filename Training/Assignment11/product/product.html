@@ -1,0 +1,12 @@
+<nav-bar></nav-bar>
+<div class="item-container" ng-init="getProduct()">
+    <img src={{product[0].image}} alt="product">
+    <div>
+        <h1>${{product[0].salePrice}}</h1>
+        <h1>{{product[0].name}}</h1>
+        <h2>Manufacturer : {{product[0].manufacturer}}</h2>
+        <h3>{{product[0].shortDescription}}</h3>
+        <h4>{{product[0].shipping}}</h4>
+    </div>
+    <button id="btn" ng-click="addToCart(product[0])">Add to Cart</button>    
+</div>

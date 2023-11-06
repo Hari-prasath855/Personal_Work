@@ -1,0 +1,19 @@
+<nav>
+    <div class="logo">
+        <img src="./images/shopping.png" alt="logo" width="40px">
+        <span>Shopping Cart</span>
+    </div>
+    <div class="search">
+        <input type="text" ng-change="getUpdateProduct(myValue)" ng-model="myValue" placeholder="Search..."/>
+        <button><img src="./images/search.png" alt="search" width="14px"></button>
+        <div ng-if="myValue===''" ng-init="getProduct()"></div>
+    </div>
+    <div>
+        <a href="#!/home">Home</a>
+        <a href="#!/cart">Cart ({{cartItems.length}})</a>
+        <a href="#!/login">Logout</a>
+    </div>
+</nav>
+<div ng-if="products.length===0" class="home-container">"Nothing Found"</div>
+ 
+

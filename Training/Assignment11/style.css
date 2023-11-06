@@ -1,0 +1,323 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Brush Script MT', cursive;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 90px 15px 30px;
+    margin-bottom:10px ;
+    border: 1px solid #000;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+nav a{
+    margin: 0 20px;
+    text-decoration: none;
+    color: #000;
+}
+nav span{
+    font-size: 30px;    
+}
+.login-container{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+.login-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+    height: 450px;
+    padding: 30px 30px 20px 30px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.footer-text{
+    font-size: 20px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.content input{
+    margin: 8px 10px;
+    padding: 10px;
+}
+.btn {
+  background-color: initial;
+  background-image: linear-gradient(#8614f8 0, #760be0 100%);
+  border-radius: 5px;
+  border-style: none;
+  width: 94%;
+  padding: 10px;
+  box-shadow: rgba(245, 244, 247, .25) 0 1px 1px inset;
+  
+  color: #fff;
+  cursor: pointer;
+  transition: all .3s cubic-bezier(.05, .03, .35, 1);
+}
+
+.error{
+    font-size: small;
+    color: #ff0000;
+    margin-left: 10px;
+}
+.success{
+    color: #26b70f;
+    text-align: center;
+}
+.home-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+}
+.search{    
+    width: 40%;
+}
+.search input{
+    width: 80%;
+    float: left;
+    padding: 8px;
+    border: 1px solid #808080;
+    border-right: none;
+    outline: none;
+}
+.search button{
+    width: 10%;
+    float: left;
+    padding: 8px;
+    border: 1px solid #808080;
+    border-left: none;
+    cursor: pointer;
+    background-color: #ffbf00;
+}
+.home-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 20%;
+    height: 350px;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #000;
+}
+
+.product img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 10px;
+    padding: 10px;
+}
+
+.product span, .product h2, .product  h4{
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+
+.item-container{
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+.item-container img{
+    width: 200px;
+    height: 300px;
+    object-fit: contain;
+    margin: 30px;
+}
+.item-container div{
+    padding: 50px 50px 40px 20px;
+    width: 40%;
+}
+
+.item-container button{
+    background-color: initial;
+  background-image: linear-gradient(#8614f8 0, #760be0 100%);
+  border-radius: 5px;
+  border-style: none;
+  width: 14%;
+  padding: 10px;
+  box-shadow: rgba(245, 244, 247, .25) 0 1px 1px inset;
+  color: #fff;
+  cursor: pointer;
+  transition: all .3s cubic-bezier(.05, .03, .35, 1);
+}
+
+.item-container h1, h2, h3, h4{
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+.cart-container{
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 150px;
+    margin: 5px;
+}
+.cart-container img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+.div-container1{
+    padding: 50px 50px 40px 20px;
+    width: 40%;
+}
+.div-container2{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quantity{
+    margin: 6px;
+    width: 8%;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.div-container2 p{
+    margin: 10px;
+}
+
+.remove{
+    background-color: initial;
+  background-image: linear-gradient(#f83a14 0, #d4461a 100%);
+  border-radius: 5px;
+  border-style: none;
+  width: 26%;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: rgba(245, 244, 247, .25) 0 1px 1px inset;
+  color: #fff;
+  cursor: pointer;
+  transition: all .3s cubic-bezier(.05, .03, .35, 1);
+}
+
+.cart-container h5, h2, h3, h4{
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+.buy{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+}
+.buy button{
+    background-color: initial;
+  background-image: linear-gradient(#8614f8 0, #760be0 100%);
+  border-radius: 5px;
+  border-style: none;
+  width: 10%;
+  padding: 10px;
+  box-shadow: rgba(245, 244, 247, .25) 0 1px 1px inset;
+  color: #fff;
+  cursor: pointer;
+  transition: all .3s cubic-bezier(.05, .03, .35, 1);
+}
+
+.btn:hover, .buy button:hover, .cart-container button:hover,.item-container button:hover,.button1:hover {
+    opacity: .7;
+  }
+
+.buy-container{
+    width: 90%;
+    margin: 2px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.buy-container span{
+    width: 40%;
+}
+
+.buy-btn{
+    margin: 20px;
+    width: 90%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.button1{
+    background-color: initial;
+  background-image: linear-gradient(#8614f8 0, #760be0 100%);
+  border-radius: 5px;
+  border-style: none;
+  width: 15%;
+  padding: 10px;
+  box-shadow: rgba(245, 244, 247, .25) 0 1px 1px inset;
+  color: #fff;
+  cursor: pointer;
+  transition: all .3s cubic-bezier(.05, .03, .35, 1);
+
+}
+
+.payment-head{
+    margin: 20px;
+    width: 30%;
+    padding: 10px;
+    display: flex;
+    border: 1px solid #000;
+    align-items: center;
+}
+
+.checkbox {
+    margin: 10px;
+}
+
+.pay-content{
+    width: 30%;    
+    border: 1px solid #000;
+}
+
+.pay-content input{
+    width: 80%;
+    padding: 10px;
+    margin: 5px;
+}
+
+.pay-content button{
+    background-color: initial;
+    background-image: linear-gradient(#8614f8 0, #760be0 100%);
+    border-radius: 5px;
+    border-style: none;
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: rgba(245, 244, 247, .25) 0 1px 1px inset;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s cubic-bezier(.05, .03, .35, 1);
+
+}

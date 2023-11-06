@@ -1,0 +1,37 @@
+[
+   {
+      "id": 877,
+      "short_name": "A1",
+      "name": "Won Ton Soup with Chicken",
+      "description": "chicken-stuffed won tons in clear chicken broth with white meat chicken pieces and a few scallions",
+      "image": "./images/A.jpg"
+   },
+   {
+      "id": 878,
+      "short_name": "B1",
+      "name": "Chicken Egg Roll",
+      "description": "eggroll with cabbage, carrots and Chicken",
+      "image": "./images/B.jpg"
+   },
+   {
+      "id": 879,
+      "short_name": "C1",
+      "name": "Orange Chicken",
+      "description": "chunks of chicken, breaded and deep-fried with sauce containing orange peels",
+      "image": "./images/C.jpg"
+   },
+   {
+      "id": 880,
+      "short_name": "D1",
+      "name": "Chicken with Vegetables",
+      "description": "sliced lean Chicken meat sauteed with mixed vegtables in brown sauce",
+      "image": "./images/D.jpg"
+   },
+   {
+      "id": 881,
+      "short_name": "E1",
+      "name": "Chicken Broccoli",
+      "description": "sliced Chicken sauteed with broccoli in brown sauce",
+      "image": "./images/F.jpg"
+   }
+]

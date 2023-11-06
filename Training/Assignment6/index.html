@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Assignment 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" ng-app="myFirstApp">
+        <div class="content" ng-controller="moduleController">
+            <label>Food List</label>
+            <input ng-model="foodList" placeholder="List comma separated dishes here...">
+            <button ng-click="check(foodList)">Check If Too Much</button>
+            <div class="resultbox" ng-show="display" ng-class="{green:result[0],red:!result[0]}">
+                {{result[1]}}
+            </div>
+        </div>
+    </div>
+    <script src=""></script>
+    <script src="https://code.angularjs.org/snapshot/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controller.js"></script>
+    <script src="service.js"></script>
+</body>
+
+</html>

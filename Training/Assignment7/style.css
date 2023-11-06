@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 10px;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.input-container input {
+    margin: 10px 20px;
+    width: 20%;
+    padding: 5px 10px;
+}
+
+.btn {
+    padding: 8px 40px;
+    background-color: #0bab10;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #808080;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #087ef4;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container>div {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 30px;
+    width: 40%;
+    height: 500px;
+    padding: 20px 40px;
+    border: 1px solid #000;
+    overflow: auto;
+}
+
+.buy-content {
+    display: flex;
+    padding: 10px 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buy-content p {
+    display: inline;
+    margin: 0 50px 0 0;
+}
+
+.buy-content button {
+    margin: 0 0 0 5px;
+    padding: 8px;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #808080;
+    background-color: #0bab10;
+    border-radius: 18px;
+}
+
+.bought-content {
+    display: flex;
+    justify-content: center;
+    padding: 15px 5px;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    color: #ff0000;
+}

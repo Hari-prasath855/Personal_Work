@@ -1,0 +1,24 @@
+<nav>
+    <div class="logo">
+        <img src="./images/shopping.png" alt="logo" width="40px">
+        <span>Shopping Cart</span>
+    </div>
+</nav>
+
+<div class="login-container">
+    <div class="login-content">
+        <h1>Login</h1>
+        <span class="success" ng-if="alert">Login Successful!</span>
+        <span class="error" ng-if="noAcc">Account doesn't exist</span>
+        <div class="content">
+            <input type="text" ng-model="email" placeholder="UserName or Email" required>
+            <input type="password" ng-model="password" placeholder="Password" required>
+        </div>
+        <button class="btn" ng-click="login(email,password)">Login</button>
+        <span>Don't have an account?<a href="#!/signup">Signup</a></span>
+        <div class="footer-logo">
+            <img src="./images/shopping.png" alt="logo" width="20px">
+            <span class="footer-text">Shopping Cart</span>
+        </div>
+    </div>
+</div>

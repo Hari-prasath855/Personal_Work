@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Check off Shopping List</h1>
+    </header>
+    <div ng-app="shoppingList">
+
+        <div ng-controller="shoppingController">
+            <div class="input-container">
+                <input ng-model="product" placeholder="Product">
+                <input ng-model="quantity" type="number" placeholder="Quantity">
+            </div>
+            <div class="input-container">
+                <button class="btn" ng-click="addToBuy(product,quantity)">Add</button>
+            </div>
+
+            <div class="container">
+                <div>
+                    <header>
+                        <h3>To Buy</h3>
+                    </header>
+                    <div ng-repeat="item in buyList">
+                        <display-details items="item" callback="buy($index)"></display-details>
+                    </div>
+                    <div ng-if="isBuyListEmpty()">
+                        <hr>
+                        <p class="message">Everythink is bought</p>
+                    </div>
+
+                </div>
+                <div>
+                    <header>
+                        <h3>Already Bought</h3>
+                    </header>
+                    <div ng-repeat="boughtItem in alreadyBoughtList">
+                        <div class="bought-content">
+                            <span>Bought {{boughtItem[0].quantity}} {{boughtItem[0].product}}</span>
+                        </div>
+                        <hr>
+                    </div>
+                    <div ng-if="isBoughtListEmpty()">
+                        <hr>
+                        <p class="message">Nothing bought yet</p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.angularjs.org/snapshot/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controller.js"></script>
+    <script src="service.js"></script>
+    <script src="directive.js"></script>
+</body>
+
+</html>

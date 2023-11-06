@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Info and Sign Up</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div ng-app="restaurant" ng-controller="mainController">
+            <div class="head">
+                <h1>Welcome to our Restaurant</h1>
+            </div><hr>
+            <div class="main">
+                <button ng-click="goToPage('/info')">Info</button>
+                <button ng-click="goToPage('/signUp')">Sign Up</button>
+            </div>           
+            <div ng-view></div>
+        </div>
+        <script src="https://code.angularjs.org/snapshot/angular.min.js"></script>
+        <script src="https://code.angularjs.org/snapshot/angular-route.min.js"></script>
+        <script src="app.js"></script>
+        <script src="mainController.js"></script>
+        <script src="info/infoController.js"></script>
+        <script src="signup/signUpController.js"></script>
+        <script src="signup/signUpService.js"></script>
+    </body>
+</html>

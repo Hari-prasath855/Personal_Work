@@ -1,0 +1,85 @@
+.main{
+    display: flex;
+    justify-content: center;
+}
+.main button{
+    width: 15%;
+    padding: 10px;
+    margin: 10px 20px;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+form input{
+    margin: 10px;
+    width: 22%;
+    padding: 10px;
+}
+
+form button{
+    margin: 30px;
+    width: 13%;
+    padding: 10px;
+}
+
+form span{
+    color: #ff0000;
+    font-size: small;
+    display: flex;
+    justify-content: left;
+}
+
+.success{
+    color: #2bd32b;
+}
+
+.info{    
+    display: flex;
+    justify-content: center;
+}
+.box{
+    width: 40%;
+    border:1px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px ;
+}
+
+.box img{
+    border: 1px solid #000;
+    margin-top: 10px;
+    display: block;
+    width: 250px;
+}
+
+.box p{
+    margin: 5px;
+}
+
+.info-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    padding: 0 60px;
+    border: 1px solid #000;
+}
+.info-content p{
+    width: 25%;
+    padding: 10px;
+}
+.info span{
+    width: 10%;
+}

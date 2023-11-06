@@ -1,0 +1,27 @@
+<!-- When showing the favorite menu item, display the picture of the menu item as well as its title and description. -->
+<h1>Info</h1>
+<div class="main" ng-if="!user.firstname">Not Signed Up Yet. <a href="#!/signUp">Sign up Now!</a></div>
+
+<div class="info" ng-if="user.firstname">
+     <div class="box">
+          <div>Favorite Dish : {{user.dish}}</div>
+          <img src={{user.image}} alt="image">
+          <p>{{user.dishname}}</p>
+          <p>{{user.description}}</p>
+     </div>
+     <div class="box">
+          <div class="info-content">
+               <p>First Name : </p> <span>{{user.firstname}}</span>
+          </div>
+          <div class="info-content">
+               <p>Last Name : </p> <span>{{user.lastname}}</span>
+          </div>
+          <div class="info-content">
+               <p>Email : </p> <span>{{user.email}}</span>
+          </div>
+          <div class="info-content">
+               <p>Phone : </p> <span>{{user.phone}}</span>
+          </div>
+     </div>        
+     
+</div>
