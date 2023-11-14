@@ -1,19 +1,24 @@
 import closeIcon from '../../image/cross.png'
 
-export const ProductDetails = (props) =>{
+type ProductDetailsProps = {
+    value: any,
+    addToCart: (id: any) => any,
+    close: () => any
+}
+export const ProductDetails = (props: ProductDetailsProps) => {
     const{ value, addToCart, close } = props
     const button = () => {
-        document.getElementById("btn").innerHTML = "Added!"
+        let root: any = document.getElementById('btn')
+        root.innerHTML = 'Added!'
     }
-    return(
-        <div className="item-container">
-            <div className="item-heading">
+   return (
+    <div className="item-container">
+        <div className="item-heading">
             <h1 style={{margin:'0 25px'}}>Product Details</h1>
             <button style={{backgroundColor:'transparent', outline:'none', border:'none', cursor:'pointer', margin:'0 20px'}} onClick={() => {close()}}><img src={closeIcon} alt='close' width='25px'/></button>
-            </div>
-            
-            <hr style={{width:'100%',margin:'10px auto'}}/>
-            {value ? 
+        </div>
+        <hr style={{width:'100%',margin:'10px auto'}}/>
+        {value ? 
                 <div className="item-content">
                     <img src={value.image} alt="product"/>
                     <div className="item-div">                        
@@ -31,6 +36,6 @@ export const ProductDetails = (props) =>{
                 </div> 
                 :
                 <h1>Nothing Found</h1>}
-        </div>
-    );
+    </div>
+   )
 }

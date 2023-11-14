@@ -2,55 +2,60 @@ import React, { useEffect, useRef, useState } from "react";
 import ShoppingImg from "../../image/shopping.png"
 import { Link, useNavigate } from "react-router-dom";
 
-import '../../Style.css'
+type LoginProps = {
+    users: [],
+    updateCurrentUser: ({}) => void
 
-function Login({ users, getcurrentUser }){
-    
-    
-    const emailInputRef = useRef(null);
-    const passwordInputRef = useRef(null);
-   
+}
+export const Login = (props:LoginProps) => {
+    const emailInputRef = useRef<any>(null);
+    const passwordInputRef = useRef<any>(null);
+    const [status, setStatus] = useState(false)
+    const [pass, setPass] = useState(false)
+    const [userExist, setUserNotExist] = useState(false)
 
-    useEffect(() => {
-        emailInputRef.current.focus()
-    },[])
-    
     const headerContainer = {
         display : 'flex',
         justifyContent : 'center',
         border : '1px solid #000',
         padding : '10px'
     }
+
     const headerText = {
         fontSize : '30px'
     };
 
     const navigate = useNavigate()
-    const goTOPage = (val) => {
-        getcurrentUser(val)
+    const goTOPage = (val: any) => {        
+        props.updateCurrentUser(val)
         setTimeout(() => navigate('/products'), 1000)
     }
-    
-    const [status, setStatus] = useState(false)
-    const [pass, setPass] = useState(false)
 
-    const handleSubmit = (event) => {
-        event.preventDefault()
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
         const email = emailInputRef.current.value;
         const password = passwordInputRef.current.value;
-        users.filter((val)=>{
-            if(val.email === email && val.password === password){
-                setStatus(true);
-                setPass(false)
-                goTOPage(val);
-            }else if(val.email === email && val.password !== password){
-                setPass(true);
-            }
-        })
-        
+        if(props.users.length===0){
+            setUserNotExist(true)
+        }else{
+            setUserNotExist(false)
+            props.users.filter((val: any)=>{
+                if(val.email === email && val.password === password){
+                    setStatus(true);
+                    setPass(false)
+                    goTOPage(val);
+                }else if(val.email === email && val.password !== password){
+                    setPass(true);
+                }
+            })
+        }
     }
 
-    return (
+    useEffect(() => {
+        emailInputRef.current.focus()
+    },[])
+
+    return(
         <>
         <header style={headerContainer}>
             <img src={ShoppingImg} alt="logo" width="40px"/>
@@ -61,11 +66,12 @@ function Login({ users, getcurrentUser }){
                 <h1>Login</h1>
                 {status && <span style={{color:'green'}}><center>Successfully Login</center></span>}
                 {pass && <span style={{color:'red'}}><center>Incorrect Password</center></span>}
+                {userExist && <span style={{color:'red'}}><center>User Doesn't Exist</center></span>}
                 <div className="login-input">
                     <input type="email" placeholder="Email" ref={emailInputRef} required />
                     <input type="password" placeholder="Password" ref={passwordInputRef} required />
                 </div>                
-                <button type="submit" onClick={handleSubmit}>Login</button>
+                <button type="submit">Login</button>
                 <p>Don't have an account? <Link to={'/signup'}>Signup</Link></p>
                 <div className="footer-text">
                     <img src={ShoppingImg} alt="logo" width="20px" />
@@ -74,8 +80,6 @@ function Login({ users, getcurrentUser }){
             </form>
         </div>
         </>
-    );
+    )
 
 }
-
-export default Login
